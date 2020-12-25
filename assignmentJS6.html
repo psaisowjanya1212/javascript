@@ -1,0 +1,30 @@
+<html>
+  <head>
+  <title>Color change</title>
+  </head>
+
+  <body>
+<p><b>You have entered your favourite background and foreground color.</b></p> 
+  
+  <button onclick=myColor()>Apply Color</button>
+  <script>
+    function myColor(){
+    
+	var bgc=prompt("Input backgroud color."); 
+	if(bgc!= null){      
+        	
+		document.bgColor=bgc;
+        	var fgc=prompt("Input foreground color.");
+       		document.fgColor=fgc;
+ 		
+      		    }
+	else{
+		return null;
+	     }
+   	 }
+	
+	myColor();
+
+  </script>
+  </body>
+</html>
