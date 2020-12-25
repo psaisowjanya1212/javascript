@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Railway Reservation</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="validation.js"></script>
+</head>
+
+<body>
+<h2><marquee><i>Fields with * are mandatory and only future dates can be viewed for reservation</i></marquee></h2> 
+<form name="myForm" onsubmit="return validateForm()">
+
+	<h4>Personal Details</h4>
+	<div class="row">
+		<label>Name*</label>
+		<input type="text" name ="name" class ="textWrap inputMedium" placeholder="Enter Full Name">
+		<div class="error" id="nameErr"></div>
+	</div>
+	<div class="row">
+		<label class ="details">Date of birth</label>
+		<input type="date" name="dob"/>
+		
+	</div>
+	<div class="row">
+		<p class ="f1">Gender *</p>
+		<input type="radio" name="gender" value="male"> Male
+		<input type="radio" name="gender" value="female"> Female
+		<div class="error" id="genderErr"></div>
+
+	</div>
+	<br><br>
+
+	<h4>Contact Details</h4>
+	<div class="row">
+  		<label>Phone * +91</label>
+		<input type="text" name ="phone" class=" textWrap inputMedium" maxlength="10" placeholder="Enter Mobile No">
+   		<div class="error" id="mobileErr"></div>
+	</div>
+	<div class="row">
+		<label>Email *</label>
+		<input type="text" name="emailid"class=" textWrap inputMedium" placeholder="Enter Email" />
+		<div class="error" id="emailErr"></div>
+	</div>
+
+	<br><br>
+	<h4>Reservation Details<i>( Only future dates can be viewed)</i></h4>
+	<div class="row">
+		<label>Enter source</label>
+		<input type="text" class="textWrap inputMedium" placeHolder="Enter source"/>
+		<label>Enter destination</label>
+		<input type="text" class="textWrap inputMedium" placeHolder="Enter destination"/>
+		<label for ="today">Departure Date</label>
+			<input id="today" type="date"/>
+	</div>
+	<br><br>
+	<button type="submit" value="submit">Submit</button>
+
+</form>
+
+<script>
+var dtToday = new Date();
+var month = dtToday.getMonth() + 1;     
+var day = dtToday.getDate();
+var year = dtToday.getFullYear();
+if(month < 10)
+   month = '0' + month.toString();
+if(day < 10)
+   day = '0' + day.toString();
+
+var maxDate = year + '-' + month + '-' + day;
+$('#today').attr('min', maxDate);
+
+</script>
+
+
+</body>
+</html>
+
