@@ -1,0 +1,62 @@
+<html>
+  <head>	
+	<title> CD details</title>
+  </head>
+
+  <body>  
+	<h2> CD details</h2>
+	
+	<br>
+	<div>
+	  CD name:<br>
+	  <input id="cdN" type="text" name="cdName" value="">
+	  <br>
+	  CD publisher:<br>
+	  <input id = "cdP" type="text" name="cdPublisher" value="">
+	  <br>
+	  CD price:<br>
+	  <input id = "cdPr" type="text" name="cdPrice" value="">
+	  <br><br>
+	  <button type="button" onclick = "getCDDetails()">Display CD details</button>
+	</div>
+	
+	<div id="display">		
+		  <p id = "cdName">CD Name: </p>
+		  <p id = "cdPub">CD Publisher: </p>
+		  <p id = "cdPrice">CD Price: </p>
+	</div>
+
+
+  <script>
+  var CD = {};
+  function getCDDetails()
+  {
+	
+	CD['Name'] = document.getElementById("cdN").value;
+	CD['Publisher'] = document.getElementById("cdP").value;
+	CD['Price'] = document.getElementById("cdPr").value;
+	if(isNaN(CD.Price))
+	{
+		alert("Please provide valid price!");
+		document.getElementById("display").style.display = "none";
+		return;
+	}
+	displayAllDetails();
+  }
+  function displayAllDetails()
+  {
+	document.getElementById("cdName").innerHTML += CD.Name;
+	document.getElementById("cdPub").innerHTML += CD.Publisher;
+	
+	var price = parseInt(CD.Price);
+	price += ((price+10)/100);
+	price -= ((price+3)/100);
+	
+	document.getElementById("cdPrice").innerHTML += price;
+	
+  }
+  
+  </script>
+	
+  </body>
+</html>
