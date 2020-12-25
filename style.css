@@ -1,0 +1,43 @@
+.error {
+    color: red;
+    font-size: 90%;
+}
+input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.textWrap {
+    width: 25%;
+    padding: 10px 10px 5px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #c2c2c2;
+    outline: none;
+    color: #000;
+}
+
+.inputMedium {
+    font-size: 14px;
+    height: 38px;
+}
+
+form {
+    width: 100%;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 50px auto 0;
+    border-radius: 5px;
+}
+
+.row {
+    padding-bottom: 10px;
+}
