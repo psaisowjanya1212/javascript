@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Favourite Color</title>
+</head>
+<body>
+<form id="myForm">
+    <input id="color" type="text" onchange="changeBackground();" />
+    <br/><input id="submitColor" value="Submit" type="button" onclick="changeBackground();"/>
+</form>
+
+<p>Background will be changed to your favourite color entered</p>
+
+<script>
+
+function changeBackground() {
+    
+    document.bgColor = document.getElementById("color").value;
+}
+
+</script>
+</body>
+</html>
