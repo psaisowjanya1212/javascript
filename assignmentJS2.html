@@ -1,0 +1,30 @@
+<head>
+<title>
+Assessment Marks
+</title>
+</head>
+<body>
+<script type="text/javascript">
+var count=0;
+var marks=[100,29,34,67,89,90,57,88,65,99];
+document.writeln("<b>Marks are</b><br>");
+for(i=0;i<marks.length;i++)
+{
+	document.writeln(marks[i]);
+	count++;
+	if(count!=marks.length){
+		for(j=i+1;j<=i+1;j++) 
+		document.writeln(" , ");
+	}
+}	
+     var sum=0;
+	for(var i=0;i<marks.length;i++)
+	{
+		sum += marks[i];
+	}
+     var avg=(sum/marks.length);
+document.writeln("<br><br><b><i>Average is: "+avg+"</b></i>");
+
+
+</script>
+</body>

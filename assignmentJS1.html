@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>
+Employee Data
+</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var employees = ["Amit","Bhupesh","Chandan","Deepak","Emanual","Firdooz","Ganga","Hari","Imli","Jilmil"];
+var count=0;
+document.writeln("<b>Employees are <br></b>");
+for(var i=0;i<employees.length;i++){
+	document.writeln("<i>"+employees[i]+"</i>");
+	count++;
+	if(count!=employees.length){
+		for(j=i+1;j<=i+1;j++) 
+		document.writeln(" , ");
+	}
+}
+document.writeln("<b><br><br>Printing employees alternatively</b><br>");
+
+for(var i=0;i<employees.length;i+=2)
+  {	
+	document.writeln("<i>"+employees[i]+"</i><br>");
+  }
+
+</script>
+
+
+</body>
+</html>
